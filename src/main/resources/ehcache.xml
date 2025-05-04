@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns='http://www.ehcache.org/v3'
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core.xsd">
+
+    <!-- Cache definition for patient demographic validation -->
+    <cache alias="initializeCache">
+
+        <key-type>
+
+        </key-type>
+
+        <value-type>
+
+        </value-type>
+
+        <expiry>
+            <ttl unit="hours">1</ttl>
+        </expiry>
+
+        <resources>
+            <!-- Heap storage for 500 entries (no memory units) -->
+            <!-- Specifies the number of entries in heap memory -->
+            <heap unit="entries">500</heap>
+            <!-- Optional: Off-heap storage for overflow (100MB) -->
+            <!-- Specifies off-heap storage with memory size -->
+            <offheap unit="MB">100</offheap>
+        </resources>
+    </cache>
+
+</config>
